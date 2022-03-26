@@ -158,6 +158,7 @@ const verifyEmbed1 = new Discord.MessageEmbed()
 
     const filter = (message => {
         if(message.author.id !== member.id) return;
+        if(!captchaEnable) return;
         if(message.content == captcha.text) {
 		return true
 	}
